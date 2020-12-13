@@ -1,0 +1,33 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboard": "npm run test -- --record --key 2f239fc2-3725-4348-b527-30ac89380a12",
+    "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "author": "Pav",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.6.0",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "dependencies": {}
+}
